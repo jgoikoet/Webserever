@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio del Servidor</title>
+    <link rel="icon" href="/anarchy.png" type="image/png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .main-container {
+            display: flex; /* Usamos flexbox para alinear el contenido y la imagen */
+            align-items: flex-start; /* Alinea el contenido y la imagen en la parte superior */
+            justify-content: center; /* Centra el contenido horizontalmente */
+            padding: 20px;
+        }
+        .container {
+            width: 60%; /* Ajusta el ancho según sea necesario */
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-right: 20px; /* Espacio entre el contenido y la imagen */
+        }
+        .image-container {
+            width: 30%; /* Ajusta el ancho según sea necesario */
+        }
+        .image-container img {
+            width: 100%; /* Asegura que la imagen se ajuste al contenedor */
+            height: auto; /* Mantiene las proporciones de la imagen */
+            border-radius: 8px; /* Bordes redondeados opcionales */
+        }
+        h1 {
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #1a73e8;
+            font-size: 18px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad */
+            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="container">
+            <h1>Bienvenido a la Página de Inicio</h1>
+            <ul>
+                <li><a href="/landing_page/pagina">Ir a Página</a></li>
+                <li><a href="/landing_page/pepe">Ir a Pepe</a></li>
+                <li><a href="/landing_page/lolo">Ir a Lolo</a></li>
+                <li><a href="/landing_page/autoindex">Ir a Autoindex</a></li>
+                <li><a href="/landing_page/redirect">Ir a Redirect</a></li>
+                <li><a href="/landing_page/pagina2/autoindex">Ir a Pagina2/autoindex</a></li>
+                <li><a href="/cgi-bin">Ir a CgiGet</a></li>
+
+                <li><a href="/indexPost">Ir a CgiPost</a></li>
+                <li><a href="/badCgi">Ir a CgiInfiniteLoop</a></li>
+                <li><a href="/FileManagement">Ir a File Management</a></li>
+                <li><a href="/landing_page/pagina2">Forbidden Error 403</a></li>
+                <li><a href="/landing_page/s">Not Found Error 404</a></li>
+            </ul>
+        </div>
+        <div class="image-container">
+            <img src="rey.jpg">
+        </div>
+    </div>
+    <footer>
+        2024 Casi todos los derechos reservados
+    </footer>
+</body>
+</html>

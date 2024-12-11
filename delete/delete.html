@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Archivo</title>
+    <script>
+        function deleteFile() {
+            // Obtener el archivo seleccionado del formulario
+            const selectedFile = document.getElementById("fileSelect").value;
+
+            // Confirmar la eliminación
+            const confirmDelete = confirm(`¿Estás seguro de que deseas eliminar ${selectedFile}?`);
+
+            if (!confirmDelete) {
+                return;
+            }
+
+            // Crear la solicitud DELETE
+            fetch(`/uploaded_files/${selectedFile}`, {
+                method: 'DELETE'
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Eliminar Archivo</h1>
+    <form onsubmit="event.preventDefault(); deleteFile();">
+        <label for="fileSelect">Selecciona un archivo para eliminar:</label>
+        <select id="fileSelect" name="fileSelect">
+            <option value="archivo1.txt">archivo1.txt</option>
+            <option value="archivo2.txt">archivo2.txt</option>
+            <option value="archivo3.txt">archivo3.txt</option>
+        </select>
+        <br><br>
+        <button type="submit">Eliminar Archivo</button>
+    </form>
+</body>
+</html>
